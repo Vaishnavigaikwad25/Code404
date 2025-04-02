@@ -79,70 +79,102 @@
   .button:active {
     scale: 0.95;
   }
-  
-  /* navbar  */
-  
-  .navbar {
-    background-color: rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(15px);
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-    border-radius: 40px;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  .navbar .logo a {
-    font-size: 30px;
-    font-weight: 700;
-    color: var(--color1);
-  }
+/* Navbar Styles */
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(15px);
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 40px;
+  position: fixed;
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.navbar .logo a {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color1);
+  text-decoration: none;
+}
+
+/* Navigation Links */
+.navbar .links {
+  display: flex;
+  gap: 50px;
+  font-weight: 500;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .links li {
+  display: inline;
+}
+
+.navbar .links a {
+  text-decoration: none;
+  color: var(--color1);
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar .links a:hover {
+  color: var(--color2);
+}
+
+/* Register Button */
+.navbar .button {
+  background-color: var(--color1);
+  color: #f9f6ff;
+  padding: 8px 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar .button:hover {
+  background-color: var(--color2);
+  transform: scale(1.05);
+}
+
+.navbar .button:active {
+  transform: scale(0.95);
+}
+
+/* Toggle Button (for mobile view) */
+.navbar .toggleButton {
+  color: var(--color1);
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  display: none;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
   .navbar .links {
-    display: flex;
-    gap: 50px;
-    font-weight: 500;
-    list-style: none;
-  }
-  .navbar .toggleButton {
-    color: var(--color1);
-    font-size: 30px;
-    cursor: pointer;
-    font-weight: 500;
     display: none;
   }
-  .navbar .button {
-    background-color: var(--color1);
-    color: #f9f6ff;
-    padding: 8px 7px;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale 0.2 ease;
+
+  .navbar .toggleButton {
+    display: block;
   }
-  .navbar .button:hover {
-    background-color: var(--color2);
-    scale: 1.05;
-  }
-  
-  .navbar .button:active {
-    scale: 0.95;
-  }
-  
-
-
-
-
+}
 
   
   /* drop Down menu */
