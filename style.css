@@ -18,6 +18,17 @@
     width: auto;
     margin-left: 20px; /* Reduce extra space */
 }
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    flex-shrink: 0; /* Prevents the logo from shrinking */
+}
+
 
 .logo {
     font-size: 20px;
